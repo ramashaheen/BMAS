@@ -43,43 +43,66 @@ BMAS provides a centralized digital solution that enables secure, efficient, and
 
 ---
 
+## 👥 User Roles
+
+| Role | Permissions |
+|------|------------|
+| 🛡️ Administrative Affairs | Full access — user management, approvals, audit logs, reports, metadata schemas |
+| 👔 Department Head | Approve documents, manage department documents, generate reports |
+| 👷 Municipal Employee | Archive, search, view, and edit their own documents (with approval flow) |
+| 🗝️ Secretary | View and search documents only |
+
+---
+
 ## 🛠️ Tech Stack
 
-### Backend
+### 🎨 Frontend
+| Tool | Purpose |
+|------|---------|
+| Figma | UI/UX Design & Prototyping |
+| HTML5 & CSS3 | Structure & Styling |
+| JavaScript | Interactivity, form validation, dynamic content |
 
-* Python
-* Flask
+### ⚙️ Backend
+| Tool | Purpose |
+|------|---------|
+| Python | Core backend logic |
+| Flask | Web framework, routing & HTTP handling |
 
-### Database & Storage
+### 🗄️ Database & Storage
+| Tool | Purpose |
+|------|---------|
+| MySQL (via XAMPP) | Structured data — users, documents, metadata, audit logs |
+| GraphDB | Semantic search via RDF triples and SPARQL queries |
+| Local File Storage | PDF document storage with unique timestamped filenames |
 
-* MySQL
-* GraphDB (RDF & SPARQL)
-* Local File Storage
+### 🔧 Dev Tools
+| Tool | Purpose |
+|------|---------|
+| VS Code | Primary IDE |
+| GitHub | Version control & team collaboration |
+| Postman | API testing |
+| pytest & Flask Test Client | Backend unit & integration testing |
+| MySQL Workbench | Database verification |
+| GraphDB Workbench | RDF triple validation |
 
-### Frontend
-
-* HTML5, CSS3
-* JavaScript
-* Bootstrap 5
-
-### Tools
-
-* GitHub
-* Postman
-* MySQL Workbench
-* GraphDB Workbench
 
 ---
 
 ## 🏗️ Architecture
 
-The system follows a multi-layered architecture:
-
-* Presentation Layer (User Interface)
-* Business Logic Layer (Flask Backend)
-* Domain Layer (RBAC & Search Logic)
-* Data Layer (MySQL + GraphDB + File Storage)
-
+The system follows a **4-tier architecture**:
+```
+┌─────────────────────────────┐
+│     Presentation Layer      │  HTML, CSS, JavaScript
+├─────────────────────────────┤
+│    Business Logic Layer     │  Python, Flask (modular routes)
+├─────────────────────────────┤
+│   Domain & Utilities Layer  │  RBAC, DB helpers, semantic indexing
+├─────────────────────────────┤
+│       Database Layer        │  MySQL + GraphDB + File Storage
+└─────────────────────────────┘
+```
 ---
 
 ## 📸 Screenshots
