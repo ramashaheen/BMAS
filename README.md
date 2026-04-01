@@ -96,7 +96,7 @@ The system follows a multi-layered architecture:
 
 | Approve/Reject requests          |
 | -------------------------------  |
-| ![Login](screenshots/approvals.png)  |
+| ![approval](screenshots/approvals.png)  |
 
 ### 🏠 Dashboards
 
